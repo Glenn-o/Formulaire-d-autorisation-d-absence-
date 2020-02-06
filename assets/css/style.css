@@ -1,0 +1,105 @@
+html{
+    padding: 0;
+    margin: 0;
+}
+#global h1{
+    text-align: center;
+    padding-top: 5vh;
+} 
+#form{
+    margin-bottom: 10vh;
+    background-color: #E2E2E2;
+    color: black;
+    width: 50vw;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 13px 4px rgba(0,0,0,0.2);
+}
+#logo{
+    width: 25vw;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    background-color: #fff;
+    background-size: cover;
+}
+form label, form p, form select{
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+form input{
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    display: block;
+}
+#nom_formation{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vh;
+}
+#nom_div, #formation_div{
+    display: flex;
+    margin: 1vw;
+}
+#date_block{
+    margin: auto;
+    width: 30vw;
+    
+}
+#date1_div, #date3_div, #date4_div{
+    display: flex;
+    float: left;
+    margin: 1vh 2vw;
+}
+#label_date_au, #label_date_partir{
+    margin-left: 1vw;
+}
+
+#motif, #date_now, #signature, #submit{
+    display: flex;
+    justify-content: center;
+    clear: both;
+    width: 30vw;
+    margin: auto;
+    padding: 3vh 0;
+}
+#submit input{
+    background-color:#FEC25B;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+#submit input:hover{
+    background-color: #F2AA38;
+    transform: scale(1.05);
+    transition: 200ms;
+    
+}
+form label{
+    margin-right: 0.5vw;
+}
+form{
+    margin-bottom: 10vh;
+}
+span{
+    color: red;
+}
+input,select{
+    padding: 0.5vh 0;
+    padding-left: 5px;
+    border: 1px solid #bdc3c7;
+}
+input:focus, select:focus{
+    border: 1px solid #FEC25B;
+    outline: none;
+}
+#input_motif{
+    width: 20vw;
+}
+#signature{
+    width: 30%;
+}
