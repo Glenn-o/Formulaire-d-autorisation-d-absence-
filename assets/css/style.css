@@ -29,10 +29,14 @@ form label, form p, form select{
     display: block;
     text-align: center;
 }
+form select{
+    border-radius: 3px;
+}
 form input{
     font-family: 'Roboto', sans-serif;
     margin: auto;
     display: block;
+    border-radius: 3px;
 }
 #nom_formation{
     display: flex;
@@ -43,21 +47,22 @@ form input{
     display: flex;
     margin: 1vw;
 }
+#nom_div{
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
 #date_block{
     margin: auto;
-    width: 30vw;
-    
+    width: 45vw;
 }
-#date1_div, #date3_div, #date4_div{
+#date1_div, #date2_div{
     display: flex;
-    float: left;
+    justify-content: center;
     margin: 1vh 2vw;
-}
-#label_date_au, #label_date_partir{
-    margin-left: 1vw;
+    margin-bottom: 5vh;
 }
 
-#motif, #date_now, #signature, #submit{
+#motif, #date_now, #signature, #submit, #email_div{
     display: flex;
     justify-content: center;
     clear: both;
@@ -84,6 +89,8 @@ form label{
 }
 form{
     margin-bottom: 10vh;
+    width: 90%;
+    margin: auto;
 }
 span{
     color: red;
@@ -98,8 +105,58 @@ input:focus, select:focus{
     outline: none;
 }
 #input_motif{
-    width: 20vw;
+    margin-right: 0;
+    width: 30vw;
+    height: 20px;
+    padding: 5px 0 5px 10px;
 }
 #signature{
     width: 100%;
+}
+#input_name{
+    margin-right: 0;
+    width: 30vw;
+    height: 20px;
+    padding: 5px 0 5px 10px;
+}
+#input_formation{
+    margin-right: 0;
+    width: 30vw;
+    height: 30px;
+}
+#email_div input{
+    margin-right: 0;
+    width: 30vw;
+    height: 20px;
+    padding: 5px 0 5px 10px;
+}
+#nom_div, #formation_div, #email_div, #motif, #date1_div, #date2_div{
+    margin-right: 0;
+    float: left;
+    margin-left: 3vw;
+    width: 40vw;
+    margin-bottom: 5vh;
+}
+#label_motif{
+    margin-left: 0;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+#label_name, #label_email, #label_formation{
+    margin-left: 0px;
+}
+a{
+    color: black;
+}
+#label_date_du, #label_date_au{
+    margin-left: 0;
+}
+#time1, #time2{
+    margin-right: 0;
+    margin-left: 1vw;
+}
+#date1, #date2{
+    margin-left: 1vw;
 }

@@ -9,45 +9,15 @@ $date1 = $_POST['date1'];
 $date2 = $_POST['date2'];
 $motif = $_POST['motif'];
 $today = date("j F, Y");
-$mail = $_POST['mail'];
-$signature = "$nom, $formation, $mail, certifie avoir rempli ce formulaire.";;
+$email = $_POST['mail'];
 
-echo $signature;
-}
+// envoie du mail 
 
-// define variables and set to empty values
-$nameErr = "";
-$formationErr = "";
-$dateErr = "";
-$motifErr = "";
-$emailErr = "";
-
-//<?php echo htmlspecialchars($name);
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Le nom est obligatoire";
-  }
-  if (empty($_POST["mail"])) {
-    $emailErr = "l'Email est obligatoire";
-  }
-  if (empty($_POST["motif"])) {
-    $motifErr = "Le motif est obligatoire";
-  }
-  if (empty($_POST["date1"]) AND empty($_POST["date2"])) {
-    $dateErr = "Veuillez remplir tous les champs";
-  } 
-  else if(empty($_POST["date1"])){
-    $dateErr = "Veuillez remplir tous les champs";
-  }
-  else if(empty($_POST["date2"])){
-    $dateErr = "Veuillez remplir tous les champs";
-  }
-  else if(isset($_POST['date1']) AND isset($_POST['date2'])){
-    $date1 = $_POST["date1"];
-    $date2 = $_POST["date2"];
-  }
- 
+$to = "dessere.gabriel@gmail.com";
+$subject = "Absence";
+$headers = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+$message = "Bonjour c'est " . $nom . " de la formation " . $formation . " Le motif de mon absence est " . $motif;
 }
 
 ?>
@@ -85,27 +55,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                        echo $_POST['name'];
                     }
                         ?>">
-                    <span><?php echo $nameErr;?></span>
                 </div>
                 <div id="formation_div">
                     <label for="formation" id="label_formation">Formation <span>*</span></label>
                     <select id="formation" name="formation">
                         <option>Developpeur informatique 2019</option>
                         <option>Developpeur informatique 2020</option>
-                        <option>Developpeur informatique 2019</option>
-                        <option>Developpeur informatique 2019</option>
+                        <option>Developpeur informatique 2021</option>
+                        <option>Developpeur informatique 2022</option>
                     </select>
                 </div>
             </div>
             <div id="email_div">
-                <label for="email" id="label_email">Email <span>*</span></label>
+                <label for="email" id="label_email">Email</label>
                 <input id="mail" type="email" name="mail" value="<?php if(!empty($_POST['mail']))
                     {
                        echo $_POST['mail'];
                     }
                         ?>">
-                <span><?php echo $emailErr;?></span>
-
             </div>
             
             <div id="date_block"> <!-- DATE BLOCK -->
@@ -119,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div> <!-- END DATE BLOCK -->
 
             <div id="motif">
-                <label for="motif" id="label_motif">Motif <span>*</span></label>
+                <label for="motif" id="label_motif">Motif</label>
                 <input id="input_motif" type="text" name="motif" value="<?php if(!empty($_POST['motif']))
                     {
                        echo $_POST['motif'];
@@ -141,7 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             
         </form>
-        <h2><?php echo $MessageEnvoye;?></h2>
+        <h2><span><?php echo $MessageEnvoye;?></span></h2>
     </div>
     <script src="../js/script.js"></script>
  </section>       
